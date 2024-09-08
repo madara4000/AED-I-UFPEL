@@ -27,6 +27,9 @@ void listar()
 void lista_duplamente_ligada(void *){
 
 }
+void pbuffer (void*){
+    
+}
 int main()
 {  void *pbuffer=(void*) malloc(sizeof())
     
