@@ -39,7 +39,7 @@ Vou te mostrar uma estrutura básica do programa em C que segue as restrições 
 #define NOME sizeof(char) * 10
 #define TELEFONE sizeof(char) * 15
 #define PESSOA sizeof(NOME+INT+TELEFONE)
-void remover_pessoa(char* nome)
+void remover_pessoa(char* nome, void *pbuffer)
 {
 
 }
@@ -47,7 +47,7 @@ void adicionar_pessoa( char* nome, int* idade, char* telefone)
 {
 
 }
-void heap()
+void heap(void *pbuffer)
 {
 
 }
