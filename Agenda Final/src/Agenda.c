@@ -40,9 +40,11 @@ Vou te mostrar uma estrutura básica do programa em C que segue as restrições 
 #define TELEFONE sizeof(char) * 15
 #define PESSOA sizeof(NOME+INT+TELEFONE)
 void menu (void *pbuffer)
-{  pbuffer = realloc(pbuffer+2*INT);
+{  pbuffer = realloc(pbuffer, 4*INT);
     do
     {
+        int *opcaomenu= (int *) (pbuffer);
+        int *contpessoas=(int*)(pbuffer+TINT);
         printf("\n\tMENU\n");
         printf("\n1.Incluir Pessoas:\n ");
         printf("\n2.Buscar Pessoas:\n ");
@@ -54,13 +56,38 @@ void menu (void *pbuffer)
         switch (*opcaomenu)
         {
              case 1:
-             {
+             { pessoatemp=()
+
                 break;
              }
              case 2:
              {
                break;
                }
+                 case 3:
+             {
+                pbuffer = realloc(pbuffer,QINT+NOME+*i*PESSOA);
+                char *nomeTemp = (char *)(pbuffer + 2*INT);
+                  printf("Entre com o nome a ser encontrado:\n");
+            scanf("%s", nomeTemp);
+                remover_pessoa(nomeTemp,pbuffer);
+               break;
+               }
+                 case 4:
+             {
+               break;
+               }
+                 case 5:
+             {
+                return 0;
+                free(pbuffer);
+                break;
+              
+               }
+                  default:
+            printf("Opcao invalida!\n");
+            return 1;
+            break;
         }
 
          } while (*opcaomenu != 5);
@@ -103,5 +130,7 @@ void pbuffer (void *pbuffer){
 int main()
 {  void *pbuffer=(void*) malloc(sizeof(INT));
   menu(pbuffer);
+
+  
     
 }
